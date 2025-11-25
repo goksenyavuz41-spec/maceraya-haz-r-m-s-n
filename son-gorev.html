@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SON: Sonsuz Kasımpatı</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #1e1e3f; /* Koyu tema */
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            padding: 50px;
+            border-radius: 20px;
+            background-color: #2b2b50;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+            max-width: 700px;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 5px solid #ffcc00; /* Daha kalın ve dikkat çekici çerçeve */
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #ffcc00; /* Altın vurgu */
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+        }
+        
+        p {
+            font-size: 1.3em;
+            line-height: 1.8;
+            margin-bottom: 50px;
+            color: #e0e0e0;
+            font-style: italic;
+        }
+
+        button {
+            padding: 20px 50px; /* Daha büyük buton */
+            font-size: 1.5em;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            background-color: #f44336; /* Kırmızı/Sürpriz rengi */
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 6px #d32f2f;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button:hover {
+            background-color: #e57373;
+            transform: translateY(-3px);
+            box-shadow: 0 8px #d32f2f;
+        }
+
+        button:active {
+            transform: translateY(3px);
+            box-shadow: 0 3px #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Görev Tamamlandı!</h1>
+        
+        <p>
+            Biricik aşkım benim, hayatıma kattığın değer için sana sonsuz derecede minnettarım.
+            Ben bu Kasım'da sana özel böyle bir şey hazırlamak istedim. Herkesin aksine 3 gün
+            sonra kuruyup çöpe atılacak bir kasımpatı değil, **sonsuza kadar seninle gidecek**
+            bir kasımpatı hediyesi vermek istedim. Umarım bu hediyemden mutlu olursun.
+        </p>
+        
+        <button id="giftButton">Hediyeni Almak İçin Tıkla</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const giftButton = document.getElementById('giftButton');
+
+            giftButton.addEventListener('click', function() {
+                // Hediyenin bulunduğu yeni bir sayfanın (örneğin 'hediye-aciklama.html') URL'si
+                // veya doğrudan bir YouTube/Google Maps bağlantısı olabilir.
+                window.open('hediye-aciklama.html', '_blank'); 
+            });
+        });
+    </script>
+</body>
+</html>

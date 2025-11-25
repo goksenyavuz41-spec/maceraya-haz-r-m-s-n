@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Görev 5: Bir Oluşumuzun Yıl Dönümü</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #1e1e3f;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            padding: 40px;
+            border-radius: 15px;
+            background-color: #2b2b50;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            max-width: 700px;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 3px solid #ffcc00;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            object-fit: contain;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #e0e0e0;
+        }
+
+        .song-lyrics {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #ffcc00; /* Şarkı sözleri için vurgu rengi */
+            margin-top: 10px; 
+            margin-bottom: 40px;
+            line-height: 1.5;
+            font-style: italic;
+        }
+
+        button {
+            padding: 15px 35px;
+            font-size: 1.3em;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            background-color: #4CAF50;
+            color: white;
+            box-shadow: 0 4px #388e3c;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button:hover {
+            background-color: #66bb6a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px #388e3c;
+        }
+
+        button:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px #388e3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <img src="besinci_gorev_yeni.jpg" alt="Yıl Dönümü Kutlaması"> 
+        
+        <p>
+            13 Nisan, bir oluşumuzun, birbirimizin oluşumuzun yıl dönümü. Seninle geçirdiğim
+            **365 günün en özeliydi**. Yine yeniden bir çok yaşayacağımız 13 Nisanların ilkiydi.
+            İkinci senemiz için macera yeni başlıyordu.
+        </p>
+        
+        <p class="song-lyrics">
+            Tıpkı Erol Evgin'in dediği gibi: <br>
+            "Öyle çok sevdim ki seni<br>
+            Öyle çok ki anlatamam<br>
+            Bir tek yıla sığdı her şey<br>
+            Bir tek yıla tüm bir yaşam"
+        </p>
+        
+        <button id="nextTaskButton">Sıradaki Görev</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const nextTaskButton = document.getElementById('nextTaskButton');
+
+            nextTaskButton.addEventListener('click', function() {
+                // Burada bir sonraki sayfanızın URL'sini (örneğin 'altinci-gorev.html') belirtin.
+                window.location.href = 'altinci-gorev.html'; 
+            });
+        });
+    </script>
+</body>
+</html>

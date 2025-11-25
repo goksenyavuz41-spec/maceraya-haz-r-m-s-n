@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bir Maceraya Başla!</title>
+    <style>
+        /* CSS Başlangıcı */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #1e1e3f; /* Koyu, oyun temasına uygun arkaplan */
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+
+        .container {
+            padding: 40px;
+            border-radius: 15px;
+            background-color: #2b2b50;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            max-width: 90%;
+            width: 500px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #ffcc00; /* Parlak sarı vurgu rengi */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        /* EVET Butonu Stili */
+        #yesButton {
+            background-color: #4CAF50; /* Yeşil */
+            color: white;
+            box-shadow: 0 4px #388e3c;
+        }
+
+        #yesButton:hover {
+            background-color: #66bb6a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px #388e3c;
+        }
+        
+        #yesButton:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px #388e3c;
+        }
+
+
+        /* HAYIR Butonu Stili (Çalışmayacak) */
+        #noButton {
+            background-color: #f44336; /* Kırmızı */
+            color: white;
+            opacity: 0.7; /* Daha sönük görünmesi için */
+            cursor: not-allowed; /* Çalışmadığını belirtmek için imleç değişikliği */
+            box-shadow: 0 4px #d32f2f;
+        }
+
+        /* HAYIR butonu için hover efekti kaldırılsın */
+        #noButton:hover, #noButton:active {
+            /* Hiçbir şey olmasın */
+            transform: none;
+            box-shadow: 0 4px #d32f2f;
+        }
+
+        /* CSS Bitişi */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Maceraya Hazır Mısın?</h1>
+        <div class="buttons">
+            <button id="yesButton">EVET</button>
+            <button id="noButton">HAYIR</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript Başlangıcı
+        document.addEventListener('DOMContentLoaded', function() {
+            const yesButton = document.getElementById('yesButton');
+            const noButton = document.getElementById('noButton');
+
+            // 1. HAYIR tuşunu çalışmaz yapma (Gereksiz tıklama olayını engeller)
+            noButton.addEventListener('click', function(event) {
+                event.preventDefault(); // Varsayılan tıklama davranışını engelle
+                alert("Üzgünüm, bu macera için 'Hayır' bir seçenek değil. Hadi başlayalım!");
+                // İsterseniz buraya butonu hareket ettiren, hoplatan veya yerini değiştiren bir kod da ekleyebilirsiniz
+            });
+
+            // 2. EVET tuşuna basıldığında sıradaki sayfaya geçme
+            yesButton.addEventListener('click', function() {
+                // Burada bir sonraki sayfanızın URL'sini (örneğin 'ilk-gorev.html') belirtin.
+                window.location.href = 'ilk-gorev.html'; 
+            });
+        });
+        // JavaScript Bitişi
+    </script>
+</body>
+</html>
